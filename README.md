@@ -1,3 +1,71 @@
+# ระบบบันทึกการปฏิบัติงานประจำวัน (Daily Activity Log System)
+
+ระบบสำหรับบันทึกและติดตามการปฏิบัติงานประจำวัน พัฒนาด้วย Laravel Framework
+
+## คุณสมบัติ
+- บันทึกข้อมูลการปฏิบัติงาน
+- ค้นหาตามวันที่
+- ค้นหาและสรุปสถานะตามเดือน
+- แก้ไขและลบข้อมูล
+
+## การติดตั้ง
+
+1. Clone โปรเจค:
+```bash
+git clone [repository URL]
+cd daily-activity-log
+```
+
+2. ติดตั้ง Dependencies:
+```bash
+composer install
+```
+
+3. สร้างไฟล์ .env:
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+4. ตั้งค่าฐานข้อมูลใน .env:
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=daily_activity_log
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+5. รัน Migration:
+```bash
+php artisan migrate
+```
+
+6. รัน Seeder (ถ้าต้องการข้อมูลทดสอบ):
+```bash
+php artisan db:seed --class=DailyTaskSeeder
+```
+
+7. รันโปรเจค:
+```bash
+php artisan serve
+```
+
+## การใช้งาน
+1. เข้าสู่ระบบที่ URL: http://localhost:8000/daily-tasks/create
+2. บันทึกข้อมูลการปฏิบัติงาน
+3. ค้นหาและดูรายงานตามต้องการ
+
+## เทคโนโลยีที่ใช้
+- PHP 8.1
+- Laravel 10
+- MySQL
+- Bootstrap 5
+
+## ผู้พัฒนา
+[ชื่อของคุณ]
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
